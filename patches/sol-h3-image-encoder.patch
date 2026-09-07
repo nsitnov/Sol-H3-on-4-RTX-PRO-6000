@@ -1,0 +1,152 @@
+diff --git a/models/minimax_h3/Sol-H3/h3_runtime/encoder_pp.py b/models/minimax_h3/Sol-H3/h3_runtime/encoder_pp.py
+new file mode 100644
+index 0000000..af91f58
+--- /dev/null
++++ b/models/minimax_h3/Sol-H3/h3_runtime/encoder_pp.py
+@@ -0,0 +1,48 @@
++"""Whole-layer Qwen distribution for image prompts sensitive to TP rounding.
++
++Every decoder layer runs, unchanged, on its owning GPU. A broadcast preserves
++the replicated hidden-state/DeepStack contract after each layer. This trades
++encoder concurrency for reference-shaped BF16 GEMMs; DiT Ulysses is unchanged.
++"""
++from types import MethodType
++import torch
++import torch.distributed as dist
++
++
++def _distributed_layer_forward(self, hidden_states, *args, **kwargs):
++    if kwargs.get('use_cache') or kwargs.get('past_key_values') is not None:
++        raise RuntimeError('Layer-distributed encoder is inference-only without KV cache')
++    if self._sol_rank == self._sol_owner:
++        output = self._sol_original_forward(hidden_states, *args, **kwargs).contiguous()
++    else:
++        output = torch.empty_like(hidden_states, memory_format=torch.contiguous_format)
++    dist.broadcast(output, src=self._sol_owner, group=self._sol_group)
++    return output
++
++
++def distribute_text_layers(model, group=None):
++    if getattr(model, '_sol_encoder_tp_applied', False) or getattr(model, '_sol_encoder_pp_applied', False):
++        raise RuntimeError('Encoder already distributed')
++    rank, world = dist.get_rank(group), dist.get_world_size(group)
++    before = sum(p.numel()*p.element_size() for p in model.parameters())
++    owned = []
++    for index, layer in enumerate(model.layers):
++        owner = index*world//len(model.layers)
++        layer._sol_rank, layer._sol_owner, layer._sol_group = rank, owner, group
++        if owner == rank:
++            owned.append(index)
++            layer._sol_original_forward = layer.forward
++        else:
++            # Keep the decoder object's class for Transformers hidden-state
++            # capture, but retain none of the non-owned layer's parameters.
++            layer._modules.clear()
++            layer._parameters.clear()
++            layer._buffers.clear()
++        layer.forward = MethodType(_distributed_layer_forward, layer)
++    model._sol_encoder_pp_applied = True
++    after = sum(p.numel()*p.element_size() for p in model.parameters())
++    return {'strategy':'layer_pipeline','rank':rank,'world_size':world,
++            'layers':len(model.layers),'owned_layers':owned,
++            'parameter_bytes_before':before,'parameter_bytes_after':after,
++            'weight_dtype':'unchanged','layer_gemm_shapes':'unchanged',
++            'hidden_state_broadcasts_per_forward':len(model.layers)}
+diff --git a/models/minimax_h3/Sol-H3/h3_runtime/encoder_tp.py b/models/minimax_h3/Sol-H3/h3_runtime/encoder_tp.py
+new file mode 100644
+index 0000000..d4478e5
+--- /dev/null
++++ b/models/minimax_h3/Sol-H3/h3_runtime/encoder_tp.py
+@@ -0,0 +1,61 @@
++"""Qwen3-VL text TP, following vLLM-Omni's column/row partition strategy.
++
++Attention heads and MLP intermediate channels are partitioned; residual streams,
++embeddings, vision, and all 64 decoder layers keep their upstream semantics.
++There is no precision conversion, layer truncation, or prompt cache.
++"""
++import torch
++import torch.distributed as dist
++import torch.nn.functional as F
++from torch import nn
++
++
++class RowParallelLinear(nn.Linear):
++    def forward(self, value):
++        output = F.linear(value, self.weight, None)
++        dist.all_reduce(output, group=self.tp_group)
++        if self.bias is not None:
++            output = output + self.bias
++        return output
++
++
++def _column(module, rank, world):
++    assert isinstance(module, nn.Linear) and module.out_features % world == 0
++    width = module.out_features // world
++    module.weight = nn.Parameter(module.weight.detach().narrow(0, rank*width, width).clone(), requires_grad=False)
++    if module.bias is not None:
++        module.bias = nn.Parameter(module.bias.detach().narrow(0, rank*width, width).clone(), requires_grad=False)
++    module.out_features = width
++
++
++def _row(module, rank, world, group):
++    assert isinstance(module, nn.Linear) and module.in_features % world == 0
++    width = module.in_features // world
++    module.weight = nn.Parameter(module.weight.detach().narrow(1, rank*width, width).clone(), requires_grad=False)
++    module.in_features = width
++    module.tp_group = group
++    module.__class__ = RowParallelLinear
++
++
++def shard_text_model(model, group=None):
++    if getattr(model, '_sol_encoder_tp_applied', False):
++        raise RuntimeError('Encoder tensor parallelism already applied')
++    rank, world = dist.get_rank(group), dist.get_world_size(group)
++    config = model.config
++    assert config.num_attention_heads % world == 0
++    assert config.num_key_value_heads % world == 0
++    assert config.intermediate_size % world == 0
++    before = sum(p.numel()*p.element_size() for p in model.parameters())
++    for block in model.layers:
++        for name in ('q_proj','k_proj','v_proj'):
++            _column(getattr(block.self_attn,name),rank,world)
++        _row(block.self_attn.o_proj,rank,world,group)
++        for name in ('gate_proj','up_proj'):
++            _column(getattr(block.mlp,name),rank,world)
++        _row(block.mlp.down_proj,rank,world,group)
++    model._sol_encoder_tp_applied = True
++    after = sum(p.numel()*p.element_size() for p in model.parameters())
++    return {'rank':rank,'world_size':world,'layers':len(model.layers),
++            'parameter_bytes_before':before,'parameter_bytes_after':after,
++            'local_query_heads':config.num_attention_heads//world,
++            'local_kv_heads':config.num_key_value_heads//world}
+diff --git a/models/minimax_h3/Sol-H3/h3_runtime/engine.py b/models/minimax_h3/Sol-H3/h3_runtime/engine.py
+index 5ea8aa6..e54ddb2 100644
+--- a/models/minimax_h3/Sol-H3/h3_runtime/engine.py
++++ b/models/minimax_h3/Sol-H3/h3_runtime/engine.py
+@@ -184,7 +184,9 @@ class MiniMaxH3Inference:
+             self.pipe = ModularPipeline.from_pretrained(
+                 model_path, components_manager=manager
+             )
+-        load_kwargs = {"dtype": torch.bfloat16}
++        # Resolve T2V components from the explicitly staged, pinned model too.
++        # Upstream component specs otherwise retain unpinned Hub repo paths.
++        load_kwargs = {"dtype": torch.bfloat16, "pretrained_model_name_or_path": model_path}
+         if task == "ref2va":
+             # Resolve every Ref2VA component below the selected model root. This
+             # also avoids stale absolute paths in locally converted indexes.
+@@ -199,6 +201,15 @@ class MiniMaxH3Inference:
+                 f"failed to load {component} from {model_path!r}; "
+                 f"make sure {component}/config.json and all checkpoint shards exist"
+             )
++        self.encoder_tp_report = None
++        if os.environ.get("H3_ENCODER_PP", "0") == "1":
++            from .encoder_pp import distribute_text_layers
++            self.encoder_tp_report = distribute_text_layers(self.pipe.text_encoder.model.language_model)
++            print("[sol_h3] encoder layer distribution", self.encoder_tp_report, flush=True)
++        elif os.environ.get("H3_ENCODER_TP", "0") == "1":
++            from .encoder_tp import shard_text_model
++            self.encoder_tp_report = shard_text_model(self.pipe.text_encoder.model.language_model)
++            print("[sol_h3] encoder TP", self.encoder_tp_report, flush=True)
+         self.pipe.to(self.device)
+         self.pipe.scheduler.set_shift(12.0)
+         self.pipe.audio_scheduler.set_shift(3.0)

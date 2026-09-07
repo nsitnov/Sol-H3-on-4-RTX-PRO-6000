@@ -1,5 +1,7 @@
 # How Sol-H3 was adapted for RTX PRO 6000
 
+The encoder tensor-parallel design below describes the original **T2V** campaign. The later [I2V/Ref2VA extension](IMAGE_TESTS.md) uses whole-layer encoder distribution after the original TP variant failed full multimodal parity. DiT Ulysses4 remains shared by both campaigns.
+
 ## 1. Identify what was actually running out of memory
 
 Starting four `torchrun` processes does not pool four devices into a single transparent 384GB memory space. A tensor still lives on a particular device unless the program explicitly partitions it.

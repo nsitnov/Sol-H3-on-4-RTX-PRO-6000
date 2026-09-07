@@ -1,5 +1,7 @@
 # What to expect on eight RTX PRO 6000 GPUs
 
+These numeric scenarios use the original T2V measurements. The [image-conditioned campaign](IMAGE_TESTS.md#eight-gpus) uses a different encoder distribution and additional reference encoding; its eight-GPU latency has not been measured or projected with these same numbers.
+
 **This is a forecast, not a measured eight-GPU result.** The completed experiment used four cards. No eight-GPU RTX generation, latency, output quality or numerical parity is claimed here.
 
 There are two different goals: reduce the latency of one clip by cooperating across eight GPUs, or increase throughput by running two independent four-GPU replicas. They require different benchmarks.

@@ -20,3 +20,9 @@ For a reproducible issue report, include the repository/upstream revisions, Pyth
 
 The benchmark launcher refuses an existing attempt directory and existing GPU workers. It never kills a service. Use a new attempt name after diagnosing a failed run; keep the earlier records so successful samples are not selectively combined across attempts.
 
+
+## Text parity passes but image parity fails
+
+Do not reuse a text-only TP check as evidence for I2V or Ref2VA. The original encoder TP4 patch failed the full image-conditioned 2% gate. Use the cumulative image patch on a separate clean pinned checkout, set `H3_ENCODER_TP=0` and `H3_ENCODER_PP=1`, then run the full multimodal check on the actual source images. See [IMAGE_TESTS.md](IMAGE_TESTS.md) for the accepted whole-layer design and the rejected FP32-reduction experiment.
+
+For Ref2VA, ensure `H3_REF_MODEL_ROOT` contains `transformer_ref/` and shared base components. A native ComfyUI `Ref2VA` directory is a different format; it is not the Diffusers partition expected by this runtime. Keep the dedicated LightX Ref2V four-step adapter filename and the upstream `match` resize profile.

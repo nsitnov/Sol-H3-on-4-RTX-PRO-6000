@@ -1,5 +1,7 @@
 # Benchmark methodology and measured evidence
 
+This page preserves the original T2V campaign. The later 16-render I2V/Ref2VA campaign, with a different encoder distribution, is documented separately in [IMAGE_TESTS.md](IMAGE_TESTS.md).
+
 All measurements below are from the completed four-GPU `tp4_a4` campaign on September 7, 2026. The campaign produced 12 successful renders: one warmup and three measured requests for each of three cases. The complete exported records are in [measurements.json](../benchmarks/2026-09-07/measurements.json); numerical gates are in [numerical_checks.json](../benchmarks/2026-09-07/numerical_checks.json).
 
 ## Protocol

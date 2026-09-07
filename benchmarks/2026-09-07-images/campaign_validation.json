@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "renders": 16,
+  "warmups": 4,
+  "measured": 12,
+  "records": [
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01/repeat3/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01/repeat2/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01/repeat1/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01/warmup/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01_10s/repeat3/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01_10s/repeat2/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01_10s/repeat1/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/i2v_a1/source_i2v_01_10s/warmup/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/source_ref2v_04/repeat3/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/source_ref2v_04/repeat2/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/source_ref2v_04/repeat1/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/source_ref2v_04/warmup/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/ref2v_neon_signal_10s/repeat3/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/ref2v_neon_signal_10s/repeat2/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/ref2v_neon_signal_10s/repeat1/result.json",
+      "passed": true
+    },
+    {
+      "record": "results/sol_h3_image_20260907/ref2va_a1/ref2v_neon_signal_10s/warmup/result.json",
+      "passed": true
+    }
+  ],
+  "public": [
+    {
+      "path": "/sol-h3-image.html",
+      "status": 200,
+      "sha256_matches": true
+    },
+    {
+      "path": "/media/SolH3_GPU4_i2v5s.mp4",
+      "status": 200,
+      "sha256_matches": true,
+      "range_status": 206
+    },
+    {
+      "path": "/media/SolH3_GPU4_i2v10s.mp4",
+      "status": 200,
+      "sha256_matches": true,
+      "range_status": 206
+    },
+    {
+      "path": "/media/SolH3_GPU4_ref5s.mp4",
+      "status": 200,
+      "sha256_matches": true,
+      "range_status": 206
+    },
+    {
+      "path": "/media/SolH3_GPU4_ref10s.mp4",
+      "status": 200,
+      "sha256_matches": true,
+      "range_status": 206
+    },
+    {
+      "path": "/media/SolH3_input_chef.jpg",
+      "status": 200,
+      "sha256_matches": true
+    },
+    {
+      "path": "/media/SolH3_input_observatory.jpg",
+      "status": 200,
+      "sha256_matches": true
+    },
+    {
+      "path": "/media/SolH3_input_neon_subject.jpg",
+      "status": 200,
+      "sha256_matches": true
+    },
+    {
+      "path": "/media/SolH3_input_neon_scene.jpg",
+      "status": 200,
+      "sha256_matches": true
+    }
+  ],
+  "quality": "pending_human_review"
+}

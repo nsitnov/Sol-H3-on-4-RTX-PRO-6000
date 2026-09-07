@@ -1,0 +1,102 @@
+[
+  {
+    "id": "source_i2v_01",
+    "mode": "i2v",
+    "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Live-action, cinematic, a warm daylight medium close-up preserves the adult male chef's short brown hair, trimmed beard, focused expression, white double-breasted chef's coat with black piping and buttons, black trousers, and his position at the wooden cutting board established in <Picture 1>. The crowded kitchen remains unchanged, with copper pans hanging behind him, jars and ingredients on the shelves, vivid vegetables and herbs filling the right foreground, and a metal pot steaming on the stove. Beginning with the knife resting against the cucumber, he curls the fingertips of his guiding hand inward and drives the broad blade through it in a quick sequence of clean, even downward cuts. The camera pushes in with small amplitude at slow speed toward his hands as thin cucumber rounds accumulate beside the chopped carrots and other vegetables. He finishes the final slice, turns the blade sideways, and uses its flat face to gather the fresh pieces into a neat pile while steam continues to billow behind him and sunlight glints along the moving knife.\n\noverall_soundscape: The knife strikes the wooden board in a fast, regular rhythm beneath the low hiss and bubbling of the simmering pot. Vegetables scrape softly across the board, fabric shifts with the chef's arm movements, and quiet kitchen room tone continues in the background.\n\nnon_diegetic_music: N/A",
+    "seconds": 5,
+    "source": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/prompts_i2va_test.json",
+    "split": "development",
+    "image": "benchmark/i2va_test_1_chef.jpg",
+    "sol_task": "i2v",
+    "inputs": [
+      {
+        "path": "assets/references/i2va_test_1_chef.jpg",
+        "sha256": "0452cc33baddebfd8ec114f2f5bfa4c759fd213b7ccba7e7acc305e3b9b55811",
+        "size": [
+          1280,
+          720
+        ]
+      }
+    ]
+  },
+  {
+    "id": "source_i2v_01_10s",
+    "mode": "i2v",
+    "prompt": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.\n\nintegrated_multimodal_description: [Shot 1] Live-action, cinematic, a warm daylight medium close-up preserves the adult male chef's short brown hair, trimmed beard, focused expression, white double-breasted chef's coat with black piping and buttons, black trousers, and his position at the wooden cutting board established in <Picture 1>. The crowded kitchen remains unchanged, with copper pans hanging behind him, jars and ingredients on the shelves, vivid vegetables and herbs filling the right foreground, and a metal pot steaming on the stove. Beginning with the knife resting against the cucumber, he curls the fingertips of his guiding hand inward and drives the broad blade through it in a quick sequence of clean, even downward cuts. The camera pushes in with small amplitude at slow speed toward his hands as thin cucumber rounds accumulate beside the chopped carrots and other vegetables. He finishes the final slice, turns the blade sideways, and uses its flat face to gather the fresh pieces into a neat pile while steam continues to billow behind him and sunlight glints along the moving knife.\n\noverall_soundscape: The knife strikes the wooden board in a fast, regular rhythm beneath the low hiss and bubbling of the simmering pot. Vegetables scrape softly across the board, fabric shifts with the chef's arm movements, and quiet kitchen room tone continues in the background.\n\nnon_diegetic_music: N/A",
+    "seconds": 10,
+    "source": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/prompts_i2va_test.json",
+    "split": "development",
+    "image": "benchmark/i2va_test_1_chef.jpg",
+    "derived_from": "source_i2v_01",
+    "duration_adaptation": "Same prompt; requested duration increased from 5 to 10 seconds.",
+    "sol_task": "i2v",
+    "inputs": [
+      {
+        "path": "assets/references/i2va_test_1_chef.jpg",
+        "sha256": "0452cc33baddebfd8ec114f2f5bfa4c759fd213b7ccba7e7acc305e3b9b55811",
+        "size": [
+          1280,
+          720
+        ]
+      }
+    ]
+  },
+  {
+    "id": "source_ref2v_04",
+    "mode": "ref2v",
+    "prompt": "subject_definitions:\n<Subject 1> is a tan-skinned adult man with close-cropped dark hair, light stubble, a sand-colored field jacket, and a burgundy scarf, as shown in <Picture 1>.\n<Subject 2> is a vintage brass telescope on a dark tripod, as shown in <Picture 1>.\n<Subject 3> is a small red-glowing metal lantern on a weathered table, as shown in <Picture 1>.\n<Subject 4> is a quiet desert observatory at dusk with soft mountain silhouettes, as shown in <Picture 1>.\n\nsummary:\n[reference generation] In one continuous 5.1667-second shot inside <Subject 4>, <Subject 1> notices a distant flash, turns toward <Subject 2>, adjusts its focus ring once, and reaches the eyepiece as <Subject 3> pulses red.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the same adult identity, facial structure, hair, stubble, jacket, scarf, and body proportions.\n<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve the same brass tube, black fittings, tripod geometry, scale, and position.\n<Subject 3> (appears in [Shot 1]): fully_preserved - Preserve the same metal housing and red light.\n<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the dusk palette, mountain horizon, and sparse desert setting.\n\ndetailed_description:\nVisual style: cinematic naturalism with warm lantern light against a cool violet dusk. One locked medium shot preserves the composition from <Picture 1>. The camera stays fixed with no pan, tilt, zoom, or dolly.\n\n[Shot 1, 00:00.000-00:01.300] <Subject 1> stands beside <Subject 2> as the final dusk light outlines the brass tube and distant mountain ridge. A faint cold flash crosses his eyes from outside frame. He stops breathing for a beat and turns his gaze sharply toward the telescope while <Subject 3> holds a steady red glow on the table.\n\n[Shot 1, 00:01.300-00:03.600] He reaches across the brass tube, grips the focus ring, and makes exactly one deliberate adjustment. The mechanism gives a precise metal click. Reflected violet sky slides across the brass surface, his scarf lifts in the desert wind, and <Subject 3> flickers once brighter without moving.\n\n[Shot 1, 00:03.600-00:05.166] <Subject 1> leans quickly but naturally to the eyepiece, steadies the telescope with his free hand, and peers through it with sudden concentration. The lantern throws a brief red edge across his cheek and telescope fittings. He holds the tense viewing pose as the distant flash fades behind the mountains.\n\noverall_soundscape:\nA faint desert breeze, a soft metal adjustment click, fabric rustle, and a quiet lantern flame.\n\nnon_diegetic_music:\nN/A\n",
+    "seconds": 5,
+    "source": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/prompts_ref2va_test.json",
+    "split": "development",
+    "references": [
+      "benchmark/ref2va_test_4_1.jpg"
+    ],
+    "sol_task": "ref2va",
+    "inputs": [
+      {
+        "path": "assets/references/ref2va_test_4_1.jpg",
+        "sha256": "3b54a682135c5e60c3584df15754c8d54177738686a0778ca89f0a326fe50bbd",
+        "size": [
+          1402,
+          1122
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ref2v_neon_signal_10s",
+    "mode": "ref2v",
+    "prompt": "subject_definitions:\n<Subject 1> is the single adult East Asian woman represented by the different views of the character sheet in <Picture 1>. Preserve her face, long black hair, fitted black leather combat suit, black gloves, boots, tattered black cloak, and one silver short blade held low in her right hand. These are views of one person, not separate people.\n<Subject 2> is the rainy cyberpunk intersection in <Picture 2>, preserving the blue-purple holographic billboard, neon architecture, wet reflective asphalt, rain, and low drifting mist.\n\nsummary:\n[reference generation] In one continuous ten-second cinematic shot in <Subject 2>, <Subject 1> looks at the camera, speaks one short instruction, beckons with her empty left hand, and walks away to the right. This is a quiet street encounter.\n\nretention_analysis:\n<Subject 1> (appears throughout): fully_preserved - same adult identity, facial structure, hair, suit, cloak, body proportions, and one lowered silver blade. Her face is unobstructed.\n<Subject 2> (appears throughout): fully_preserved - same rainy neon intersection and architectural palette. The billboard remains a background graphic, not another physical person.\n\ndetailed_description:\nPhotorealistic live-action cinematic naturalism, 16:9. Exactly one physical person. One continuous shot, no split screen, no cuts, no costume changes, no duplicate limbs, no subtitles or newly added readable text. Stable face and natural hands. No fighting.\n\n[Shot 1, 00:00.000-00:01.500] A steady medium close shot frames her face and upper torso at the edge of the wet intersection. Purple and cyan light reflects softly on her wet hair and black cloak. She turns her eyes toward the lens and takes a quiet breath.\n[Shot 1, 00:01.500-00:04.500] With a calm, clear adult female voice, <Subject 1> says exactly once: <d>[English] The street is clear. Follow me.</d> Her visible lips synchronize precisely to these words. She keeps her head steady and her right hand lowered.\n[Shot 1, 00:04.500-00:07.000] She stops speaking completely and closes her lips. She lifts her empty left hand, makes one small natural beckoning gesture, and lowers it. Her expression softens slightly. The cloak moves in a light breeze.\n[Shot 1, 00:07.000-00:10.000] Without speaking, she turns her body to the right and takes three unhurried steps along the curb. The camera pans gently right to keep her in a medium shot. Her costume, face and single lowered blade remain consistent as her boots disturb shallow puddles.\n\noverall_soundscape:\nNatural rain, distant muffled traffic, wet footsteps and soft cloak movement. The quoted sentence is the only speech, spoken once entirely between 1.5 and 4.5 seconds. From 4.5 to 10 seconds only environmental sound: no extra words, murmurs, narration or vocalizations.\n\nnon_diegetic_music:\nN/A\n",
+    "seconds": 10,
+    "references": [
+      "benchmark/ref2va_test_1_1.jpg",
+      "benchmark/ref2va_test_1_3.jpg"
+    ],
+    "split": "development",
+    "origin": "New scenario authored for the user-requested 10-second multi-GPU comparison; existing development reference assets.",
+    "expected_speech": "The street is clear. Follow me.",
+    "speech_window_seconds": [
+      1.5,
+      4.5
+    ],
+    "sol_task": "ref2va",
+    "inputs": [
+      {
+        "path": "assets/references/ref2va_test_1_1.jpg",
+        "sha256": "1665c52d9e20ace593cbc30d1e17b5cf996ad25a59c7f1890d636711da93dbd3",
+        "size": [
+          2560,
+          1440
+        ]
+      },
+      {
+        "path": "assets/references/ref2va_test_1_3.jpg",
+        "sha256": "82cdb7a20d6ec0d7c6c396cc8e99d3f5fe49a2f67f7c3e5e75d45102f4a91062",
+        "size": [
+          2560,
+          1440
+        ]
+      }
+    ]
+  }
+]

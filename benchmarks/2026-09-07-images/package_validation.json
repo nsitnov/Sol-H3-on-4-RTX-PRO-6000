@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-09-07T21:51:06.828568+00:00",
+  "fresh_pinned_source_setup": "passed; engine.py, encoder_tp.py and encoder_pp.py byte-identical to the generation runtime",
+  "image_patch_sha256": "9df90c0ad66f424491b6c78a036722fcc22d90dc6b2289470d92e03f30ff664c",
+  "portable_tiny_pp": "bit-exact FP32/BF16, all hidden states on all four ranks",
+  "portable_model_verify_only": "passed for all Ref2VA files, adapter and source images; Git blob hashes checked for small configs",
+  "pinned_source_image_downloads": {
+    "checked_utc": "2026-09-07T21:46:17.165505+00:00",
+    "inputs": [
+      {
+        "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/i2va_testset/i2va_test_1_chef.jpg",
+        "sha256": "0452cc33baddebfd8ec114f2f5bfa4c759fd213b7ccba7e7acc305e3b9b55811",
+        "size_bytes": 219127,
+        "passed": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_4_1.jpg",
+        "sha256": "3b54a682135c5e60c3584df15754c8d54177738686a0778ca89f0a326fe50bbd",
+        "size_bytes": 290315,
+        "passed": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_1_1.jpg",
+        "sha256": "1665c52d9e20ace593cbc30d1e17b5cf996ad25a59c7f1890d636711da93dbd3",
+        "size_bytes": 344933,
+        "passed": true
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_1_3.jpg",
+        "sha256": "82cdb7a20d6ec0d7c6c396cc8e99d3f5fe49a2f67f7c3e5e75d45102f4a91062",
+        "size_bytes": 390923,
+        "passed": true
+      }
+    ]
+  },
+  "portable_summary_validation": "passed all eight I2V and all eight Ref2VA records and MP4 hashes",
+  "original_full_multimodal_parity": "all four cases bit-exact at hidden state 50; tags equal; all four ranks",
+  "syntax_checks": "all portable Python scripts compile",
+  "original_campaign": "16 renders validated; four warmups and twelve measurements",
+  "fresh_environment_install": false,
+  "second_full_campaign_with_portable_harness": false,
+  "eight_gpu_test": false,
+  "quality": "pending_human_review"
+}

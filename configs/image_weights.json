@@ -1,0 +1,148 @@
+{
+  "base_repo": "MiniMaxAI/MiniMax-H3",
+  "base_revision": "42ed227ee7df40d41602854ae760620d6eb651fe",
+  "files": [
+    {
+      "name": "transformer_ref/config.json",
+      "size": 546,
+      "blob": "c251a4133c81852a150c6668a570e142dc776b6e",
+      "sha256": null
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00001-of-00014.safetensors",
+      "size": 4825958704,
+      "blob": "9b0c05d22cf4683ecb0d959abf91b0ecd8cd1e4c",
+      "sha256": "7a3fcad885f51560e550b2e84c9a8d8b35e62996cfd9076937e992bd23478df9"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00002-of-00014.safetensors",
+      "size": 4702158032,
+      "blob": "51e0598afcf143178f49a45b326de0947588d51d",
+      "sha256": "1638ae1dc8ae26c4ba43ad28a6d851ad8983847324bb2b468719c7c81f219706"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00003-of-00014.safetensors",
+      "size": 4933368192,
+      "blob": "b30b53bc2e884978e8aa857dc3f941c3ea7ac816",
+      "sha256": "1ef3c4954ffe5a664c2e3028e2a3241190d9c159dce6ba1136002c6af1db5353"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00004-of-00014.safetensors",
+      "size": 4567069608,
+      "blob": "0d13668925c5f8d8441b6d10db7cf868dcb4598d",
+      "sha256": "12d92f2975cfd5c5b786126385c52e5bf64884d4b4d6e60c3ef5d857c3f7469f"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00005-of-00014.safetensors",
+      "size": 4702158080,
+      "blob": "aa394e3cfcf04c26e949cfb3db37de989ea71a79",
+      "sha256": "304d41ce03d59ac94bceb055935bf4e034df0badf8b0df4ded327c08a288a4cc"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00006-of-00014.safetensors",
+      "size": 4933368232,
+      "blob": "7f8fcc49f1b389332e3171e3f6aad4a6feb2d768",
+      "sha256": "12a134b7c76d86edbe8fa2dc315f6cdaf4e1aca1b6ea4dfe4cad92df03d42eeb"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00007-of-00014.safetensors",
+      "size": 4567069608,
+      "blob": "94bb031935b29cb39e5831635b46e1c1191e7668",
+      "sha256": "b96395261359937c00fb42f4eb29306dc59b1a3368eeba52af4fb66e3e142c69"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00008-of-00014.safetensors",
+      "size": 4702158080,
+      "blob": "0bb15268c4dee8a62b7c15ece7f0ded6aaff7654",
+      "sha256": "1897a6bf3b4fc834bb82d73ca02a7afc7d38c07f50ec5382cd54cd2f91b604d1"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00009-of-00014.safetensors",
+      "size": 4933368232,
+      "blob": "2f6e04bfeba92b1916c5b960c125cd0d55c85801",
+      "sha256": "edfb38235adc96b99f55a401849befce59075a745e99c2d8c63ff358dd36443d"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00010-of-00014.safetensors",
+      "size": 4567069608,
+      "blob": "23aa8735c6a03426bd681a44ae0704f5c8a81d08",
+      "sha256": "f8710775cf3413670edd7e23861b650a3431a71a6cc14cb1080623ab6b052385"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00011-of-00014.safetensors",
+      "size": 4702158080,
+      "blob": "0082cfd7c050bf55c405d67d026514012dd259a6",
+      "sha256": "9e18acc09f84edb5b34df9628efa15cfcab8bb76e8e20c1c2e979a107a0f7215"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00012-of-00014.safetensors",
+      "size": 4933368232,
+      "blob": "f60fcc3c5e79e132ffadf06e5e98dcbf9c7b6401",
+      "sha256": "ea2e18228f8bdba1a4e0f32b155e4586df055997c45356213d05b971ba13e2f4"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00013-of-00014.safetensors",
+      "size": 4567069608,
+      "blob": "d9ac20a69b58fcd4dabe8bfef78d29640bc291a2",
+      "sha256": "1e12083b1875678f7414ff55b09cd8bb1c30b861243f9bb7ff1e75b6ad3f1bdc"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model-00014-of-00014.safetensors",
+      "size": 4644161920,
+      "blob": "b1dfd11195ff1b5cd520cb7e83730f092d4ea0ff",
+      "sha256": "b340f44b5690cc745d48ae399381ec15b26a4fe25d483f677ccb4960dadb50d4"
+    },
+    {
+      "name": "transformer_ref/diffusion_pytorch_model.safetensors.index.json",
+      "size": 64488,
+      "blob": "da038def25abb5a5e4be509816ee55a0b7105e09",
+      "sha256": null
+    }
+  ],
+  "adapter": {
+    "repo": "lightx2v/Minimax-h3-Turbo",
+    "revision": "2f015e66b37c585cea9dc4ae6f1850ea8788e742",
+    "file": "minimax_h3_ref2v_turbo_4step_v0.1_bf16.safetensors",
+    "size": 1383677768,
+    "sha256": "9e642fc8749c74f8da5e2382877ab5c7aa37b9a73b7fd0d6d457bd1b3cb1ae99"
+  },
+  "download_bytes": 67664247018,
+  "reference_images": [
+    {
+      "path": "assets/references/i2va_test_1_chef.jpg",
+      "sha256": "0452cc33baddebfd8ec114f2f5bfa4c759fd213b7ccba7e7acc305e3b9b55811",
+      "size": [
+        1280,
+        720
+      ],
+      "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/i2va_testset/i2va_test_1_chef.jpg"
+    },
+    {
+      "path": "assets/references/ref2va_test_4_1.jpg",
+      "sha256": "3b54a682135c5e60c3584df15754c8d54177738686a0778ca89f0a326fe50bbd",
+      "size": [
+        1402,
+        1122
+      ],
+      "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_4_1.jpg"
+    },
+    {
+      "path": "assets/references/ref2va_test_1_1.jpg",
+      "sha256": "1665c52d9e20ace593cbc30d1e17b5cf996ad25a59c7f1890d636711da93dbd3",
+      "size": [
+        2560,
+        1440
+      ],
+      "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_1_1.jpg"
+    },
+    {
+      "path": "assets/references/ref2va_test_1_3.jpg",
+      "sha256": "82cdb7a20d6ec0d7c6c396cc8e99d3f5fe49a2f67f7c3e5e75d45102f4a91062",
+      "size": [
+        2560,
+        1440
+      ],
+      "url": "https://raw.githubusercontent.com/ModelTC/Minimax-H3-Turbo/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples/ref2va_testset/ref2va_test_1_3.jpg"
+    }
+  ]
+}

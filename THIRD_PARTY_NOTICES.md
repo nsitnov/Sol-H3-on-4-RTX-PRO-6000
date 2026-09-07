@@ -15,3 +15,7 @@ Upstream source files retain their original copyright/license notices. Model and
 
 All optimization claims in this repository distinguish the existing upstream acceleration stack from the local encoder/load-path adaptation. There is no claim of NVIDIA, MiniMax, FastVideo or vLLM endorsement.
 
+
+## Image-conditioned extension
+
+Ref2VA uses the [LightX2V MiniMax-H3 Turbo adapter](https://huggingface.co/lightx2v/Minimax-h3-Turbo/tree/2f015e66b37c585cea9dc4ae6f1850ea8788e742). Reference image download URLs point to the [pinned ModelTC MiniMax-H3-Turbo examples](https://github.com/ModelTC/Minimax-H3-Turbo/tree/02e26d591f7a04d5d1a074c9566d5dd4f22f6225/examples). These assets retain their upstream terms. The repository stores hashes and source URLs, not a new license for third-party images or weights.
