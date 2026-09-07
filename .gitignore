@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+vendor/
+models/
+runs/
+.hf_cache/
+*.mp4
+*.safetensors
+*.pt
+.env
+

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "t2v_dialogue",
+    "mode": "t2v",
+    "prompt": "A realistic medium close-up of a woman in a blue wool coat standing on a quiet city street in soft morning light. She turns towards the camera, smiles naturally and says clearly, 'The train leaves in five minutes.' Her lips match each spoken word. A gentle breeze moves a strand of her hair. The camera slowly pushes in. Audio: her clear natural voice, distant traffic and a few birds. One continuous shot, no subtitles, no background music.",
+    "seconds": 5
+  },
+  {
+    "id": "t2v_dialogue_10s_extended",
+    "mode": "t2v",
+    "prompt": "A realistic medium close-up of a woman in a blue wool coat standing on a quiet city street in soft morning light. She turns towards the camera and speaks naturally to the viewer. She says exactly these three sentences, once, in order: 'The train leaves in five minutes. I have our tickets right here. Stay close, and we will reach the station together.' She begins speaking near the start and continues through most of the ten-second shot, with brief natural pauses between sentences. Her lips match every spoken word. Only this woman speaks. No additional spoken words, no repetitions, no voice-over. A gentle breeze moves a strand of her hair. The camera slowly pushes in. Audio: her clear natural voice, quiet distant traffic and a few birds. One continuous shot, no subtitles, no background music.",
+    "seconds": 10
+  },
+  {
+    "id": "t2v_short_speech_window_10s",
+    "mode": "t2v",
+    "prompt": "A realistic medium close-up of a woman in a blue wool coat standing on a quiet city street in soft morning light. One continuous ten-second shot. From 0 to 0.5 seconds she looks towards the camera silently. From 0.5 to 3 seconds she says this sentence exactly once, clearly and naturally: 'The train leaves in five minutes.' Her lips match each spoken word. From 3 to 10 seconds she keeps her lips closed and waits quietly, with subtle natural breathing and a gentle smile. A breeze moves a strand of her hair. The camera slowly pushes in. Audio: one female voice only during the specified sentence; quiet distant traffic and a few birds throughout. After the sentence there is only the outdoor ambience. No additional words, murmuring, humming, voice-over, subtitles or background music.",
+    "seconds": 10,
+    "speech_reference": "The train leaves in five minutes.",
+    "expected_speech_window": [
+      0.5,
+      3.0
+    ]
+  }
+]

@@ -1,0 +1,381 @@
+{
+  "base": {
+    "repo": "MiniMaxAI/MiniMax-H3",
+    "revision": "42ed227ee7df40d41602854ae760620d6eb651fe",
+    "files": [
+      {
+        "name": "audio_scheduler/scheduler_config.json",
+        "size": 96,
+        "blob": "28a3d4ed602d925031c7e5d6eeb07df8958ff0f1",
+        "sha256": null
+      },
+      {
+        "name": "audio_vae/config.json",
+        "size": 2271,
+        "blob": "15df6fe0b288b260dca0f2aebf1cd81334d77e96",
+        "sha256": null
+      },
+      {
+        "name": "audio_vae/diffusion_pytorch_model.safetensors",
+        "size": 605429340,
+        "blob": "4a381c6f4b9a67db97c25d250f9d00942d17a49e",
+        "sha256": "52c59e67ba8de5477c81bfbced0327aabf500f1bfdeefd5ee754529241cb26cb"
+      },
+      {
+        "name": "model_index.json",
+        "size": 2936,
+        "blob": "454be19164878173a962c39c81633e4377880fca",
+        "sha256": null
+      },
+      {
+        "name": "modular_model_index.json",
+        "size": 2935,
+        "blob": "5b69f1e801bd0a7e9733c48704c732339f2002fe",
+        "sha256": null
+      },
+      {
+        "name": "processor/chat_template.json",
+        "size": 5499,
+        "blob": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da",
+        "sha256": null
+      },
+      {
+        "name": "processor/merges.txt",
+        "size": 1671839,
+        "blob": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": null
+      },
+      {
+        "name": "processor/preprocessor_config.json",
+        "size": 390,
+        "blob": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64",
+        "sha256": null
+      },
+      {
+        "name": "processor/tokenizer.json",
+        "size": 7032403,
+        "blob": "c6cc1014128b19d1fc46b1d30a23e3b1d35db421",
+        "sha256": null
+      },
+      {
+        "name": "processor/tokenizer_config.json",
+        "size": 11003,
+        "blob": "204d76f78dac6dedc820418c30bf01145de78a21",
+        "sha256": null
+      },
+      {
+        "name": "processor/video_preprocessor_config.json",
+        "size": 385,
+        "blob": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe",
+        "sha256": null
+      },
+      {
+        "name": "processor/vocab.json",
+        "size": 2776833,
+        "blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": null
+      },
+      {
+        "name": "scheduler/scheduler_config.json",
+        "size": 97,
+        "blob": "1d44f95b955a648ad4fab455e4fe11053888c30b",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/chat_template.json",
+        "size": 5499,
+        "blob": "1081bacf1af7c7c6de4a585ce02cd0fd34e382da",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/config.json",
+        "size": 1474,
+        "blob": "29e925092dee9f14278c53e7e7d876cea8a997bc",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/merges.txt",
+        "size": 1671839,
+        "blob": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/model-00001-of-00014.safetensors",
+        "size": 4932328944,
+        "blob": "614247ef75d01ea40af9ef31e07103221340214d",
+        "sha256": "6b9dfbc930e505402ae9d7e5091a9d7d656cda5f34614f01cfe70bfb0cca27cb"
+      },
+      {
+        "name": "text_encoder/model-00002-of-00014.safetensors",
+        "size": 4875990528,
+        "blob": "0ee7c24d1c85e72bc46fd07821a1cfb4af8efd76",
+        "sha256": "d8bb44b4ff303fe76fe9e894022fb3dc71b15a2e716592790fe0e3c3e60478fa"
+      },
+      {
+        "name": "text_encoder/model-00003-of-00014.safetensors",
+        "size": 4875990552,
+        "blob": "cabcc450fe74db21934f8d99d1bc103942f721ba",
+        "sha256": "54f22e8b3168f8dc962fac0d313607ebf52a12b433d4cf3098a0d82d9f042940"
+      },
+      {
+        "name": "text_encoder/model-00004-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "da3ca77f0ee7d9bdbe0696750c094f0dc6ad3c68",
+        "sha256": "ad09c74d3c13ee29b5d0d84548fd8a3424a651564eaccd519946c296e59c557f"
+      },
+      {
+        "name": "text_encoder/model-00005-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "abb15edfb6d8c352e87914ce6a0d96a98e927e04",
+        "sha256": "fc993c8a0e2a5b0570f383e1a95dc3a1281d1b224b6f3ee908f4827941e1dfc2"
+      },
+      {
+        "name": "text_encoder/model-00006-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "66ace514a9c58011ac2bd4c796c21654b49443b2",
+        "sha256": "82f05620d1f718a90c362b221d6a184ff1a0f53301d706882d3df49695fa1974"
+      },
+      {
+        "name": "text_encoder/model-00007-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "71e871eb7cda8e711788e283e0fb512998a952be",
+        "sha256": "fb91da8cb01ff4de3eef0eab1c3e769a734b3a1aafc61734068638a0d6c86934"
+      },
+      {
+        "name": "text_encoder/model-00008-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "bf1d7c575e6d7cb1117cb8fe06c102193ced09a8",
+        "sha256": "431ca56535c8781944ce3801f5eb61c45531e853ecc5846d936ebaf4761b764f"
+      },
+      {
+        "name": "text_encoder/model-00009-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "9dfb35899c209de09e18aa4bf8346efed8269d76",
+        "sha256": "3825e3f4302f4d2f7d76aa7430d2ce0864fde6b9e540a5806bf0d8e38e4d9f47"
+      },
+      {
+        "name": "text_encoder/model-00010-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "4d94038272e1f5c0368639babad1f7b595a3690b",
+        "sha256": "aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f"
+      },
+      {
+        "name": "text_encoder/model-00011-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "826ba879b38cc6566b5aea1c3c04741a3087ba20",
+        "sha256": "3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f"
+      },
+      {
+        "name": "text_encoder/model-00012-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "c19df94cbd35798336f17365b1115200f1eec91f",
+        "sha256": "05ad2d08ce71963121c9b03f1d9ec5d7641052f4b23c6c12b80d71065eb8e98e"
+      },
+      {
+        "name": "text_encoder/model-00013-of-00014.safetensors",
+        "size": 4875990584,
+        "blob": "39fab9be2b33a5527cbb5131e13c387544a695a9",
+        "sha256": "b64f2289871261fdd1abbd3b78bcd66011b341de3dc8eeb2ed1a473ee7c8d95c"
+      },
+      {
+        "name": "text_encoder/model-00014-of-00014.safetensors",
+        "size": 3270697008,
+        "blob": "055162e6edd9914d2652ccf99f2371c000b613fe",
+        "sha256": "e45b6c9998c77ee5a6577f9f47bc76416c1d4d387169e50c4c9d3134ea51b13b"
+      },
+      {
+        "name": "text_encoder/model.safetensors.index.json",
+        "size": 97831,
+        "blob": "b7f68f12031a25c81d72d46a284fe9e1daa448b8",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/preprocessor_config.json",
+        "size": 390,
+        "blob": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/tokenizer.json",
+        "size": 7032403,
+        "blob": "c6cc1014128b19d1fc46b1d30a23e3b1d35db421",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/tokenizer_config.json",
+        "size": 11003,
+        "blob": "204d76f78dac6dedc820418c30bf01145de78a21",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/video_preprocessor_config.json",
+        "size": 385,
+        "blob": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe",
+        "sha256": null
+      },
+      {
+        "name": "text_encoder/vocab.json",
+        "size": 2776833,
+        "blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": null
+      },
+      {
+        "name": "tokenizer/merges.txt",
+        "size": 1671839,
+        "blob": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": null
+      },
+      {
+        "name": "tokenizer/tokenizer.json",
+        "size": 7032403,
+        "blob": "c6cc1014128b19d1fc46b1d30a23e3b1d35db421",
+        "sha256": null
+      },
+      {
+        "name": "tokenizer/tokenizer_config.json",
+        "size": 11003,
+        "blob": "204d76f78dac6dedc820418c30bf01145de78a21",
+        "sha256": null
+      },
+      {
+        "name": "tokenizer/vocab.json",
+        "size": 2776833,
+        "blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": null
+      },
+      {
+        "name": "transformer/config.json",
+        "size": 546,
+        "blob": "c251a4133c81852a150c6668a570e142dc776b6e",
+        "sha256": null
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00001-of-00014.safetensors",
+        "size": 4825958704,
+        "blob": "78e7c04f1246f7fd29127ba802f4c1fd65776404",
+        "sha256": "2d847200c45c09dd7f973c1b096663068408ef851ee0b3711d059b6dc5dcd028"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00002-of-00014.safetensors",
+        "size": 4702158032,
+        "blob": "4a79d68cef731db07fafbe78d9d5c6d5ddf9f395",
+        "sha256": "2c4d362eddd2802180ac9c744849eb9ba8d9c8b984bdf9822cb02ed004b29184"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00003-of-00014.safetensors",
+        "size": 4933368192,
+        "blob": "f69102656be6332afea3376b76a81a2190b2aa89",
+        "sha256": "949c5aafbbfa5654da730a6a7fafd75adb164d0857b095a30e8bb6d390887d69"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00004-of-00014.safetensors",
+        "size": 4567069608,
+        "blob": "663bd8d4ca0dfa722c99ca01d54049dd7efa0515",
+        "sha256": "eef7616790105ee839766bb2027203bf2c0d87c6aa038dca84145a8675f5ce28"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00005-of-00014.safetensors",
+        "size": 4702158080,
+        "blob": "338b0e9ce0fadd8aa27a253e50a3dbd565ded8ec",
+        "sha256": "43fdf42d638e8bc6745f713fae80c93bb301807a1a5ae7249344ce28e202a494"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00006-of-00014.safetensors",
+        "size": 4933368232,
+        "blob": "aff5d426da7d9972f3adb29f02cffaf62f94f9c1",
+        "sha256": "6442510b34d173653f0cce5c964b935395a8f7accf0b9cc0aa31aec59805239d"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00007-of-00014.safetensors",
+        "size": 4567069608,
+        "blob": "e23672b7490bcd26fcb50976b89903acd85fc6ff",
+        "sha256": "29f48f535c91dac76496ca821eeb16ca24bc4caf3f0cae8b920a89b1f966da6d"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00008-of-00014.safetensors",
+        "size": 4702158080,
+        "blob": "a7c89c8303ae2cace7518f9d995522e00872788e",
+        "sha256": "c711b096c764bd60f0b8b6ad49518bfab6d614fb788c725add8741c0674a4cd8"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00009-of-00014.safetensors",
+        "size": 4933368232,
+        "blob": "a63bcdf9be4d78b32124fcc032fbc1245f39ec05",
+        "sha256": "44428defe3976cbb87635ad200b958199e739986697cd29fdf27aeb7294b5944"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00010-of-00014.safetensors",
+        "size": 4567069608,
+        "blob": "e3b94e045a76f7cc87b17add5983165a800214a5",
+        "sha256": "3d44939c374c9da382e9c6877e1946adf7b84e08c7a881c068f228d6849411c9"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00011-of-00014.safetensors",
+        "size": 4702158080,
+        "blob": "72a25189806a418d770b37ae8efc9b0d53fc312b",
+        "sha256": "224d24430b58127a5577721084e0e704a0e74ec96dd7c35bc6fc0994ebd87c33"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00012-of-00014.safetensors",
+        "size": 4933368232,
+        "blob": "9545750c42b012ae13089df388d1569d10ad2a72",
+        "sha256": "48fa2bd8fe134eef565ab2464f1c2589a6657cba0d14283dfc06b532f8961f3c"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00013-of-00014.safetensors",
+        "size": 4567069608,
+        "blob": "5827d7644a1ebc1ce9fcf40607857257f14f5659",
+        "sha256": "be5b4b1809f9d546ffd4b3fcf41e5c1e02b819125caa6bc105c109b04c051bd3"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model-00014-of-00014.safetensors",
+        "size": 4644161920,
+        "blob": "5c97657ddfa2a1cf31bb6460a25c1caeccfe5a0c",
+        "sha256": "8fbd5e6c1fb1df7ce988ca90f3d59e7610e465c7517e4b344eda4a214ba4b97d"
+      },
+      {
+        "name": "transformer/diffusion_pytorch_model.safetensors.index.json",
+        "size": 64488,
+        "blob": "da038def25abb5a5e4be509816ee55a0b7105e09",
+        "sha256": null
+      },
+      {
+        "name": "vae/config.json",
+        "size": 2011,
+        "blob": "ed4874a5886972f4029fcd99cbbe72de0177b2c9",
+        "sha256": null
+      },
+      {
+        "name": "vae/diffusion_pytorch_model-00001-of-00003.safetensors",
+        "size": 5061033024,
+        "blob": "73f63f98715bce2897a36685ee6e3338f1a43416",
+        "sha256": "72f4c6be84ac0674f27398cde991dd9d719762f3952c4921aa66b2ce542f6374"
+      },
+      {
+        "name": "vae/diffusion_pytorch_model-00002-of-00003.safetensors",
+        "size": 4955986528,
+        "blob": "d8083e40d1b26ed6ed02afd3bd4390fff32f6af5",
+        "sha256": "2e05e8bc23fa4071043e17fd242be8acd0685e781a43987432b2eae925be4198"
+      },
+      {
+        "name": "vae/diffusion_pytorch_model-00003-of-00003.safetensors",
+        "size": 398539336,
+        "blob": "1c31fd275aa880a3fb6ac88ae62ac02e79d9a61f",
+        "sha256": "c05d6ac4b1a33de372799d708531da6320f6a3ce6d1ce6d895e770988e004a39"
+      },
+      {
+        "name": "vae/diffusion_pytorch_model.safetensors.index.json",
+        "size": 74228,
+        "blob": "05dfb255c44daa4f1ac487f57f18210fa5c19439",
+        "sha256": null
+      }
+    ]
+  },
+  "adapter": {
+    "repo": "FastVideo/FastVideo-FastH3-4-step-Preview-v1-LoRA",
+    "revision": "f509e629374cac104e7f62daecce6d1488a3041d",
+    "path": "dense-datafree/adapter_model.safetensors",
+    "bytes": 1485626152,
+    "sha256": "4ce198c83132251b7fd0de2503823aa49c53983f068318f66cb19eaefb7fcc12"
+  }
+}
