@@ -11,10 +11,11 @@ The packaging checks on September 7, 2026 include:
 - Running the portable summary validator against all 12 original result records and MP4 files through read-only links in a separate validation directory.
 - Checking every exported result against its original, with only the local MP4 filename removed from `ffprobe.format.filename`.
 - Recomputing medians and eight-GPU scenario values from the shipped numerical evidence.
+- Running `scripts/download_models.py --verify-only` against all 61 existing model files and the adapter, with all recorded size/hash checks passing.
+- Cloning the public GitHub repository independently and comparing every published file byte-for-byte with the reviewed package.
 
 The first warmup has a null upstream previous-request sparse counter. Validation of the portable summary caught that distinction; the final checker uses cumulative sparse/dense counters and completed request count, covering every warmup as well as measured requests.
 
 A complete fresh-host dependency installation and a second 12-render generation campaign with the portable harness were not performed. Full-checkpoint encoder parity and full video/audio generation are supported by the original campaign records. Eight-GPU generation and eight-rank numerical checks have not been performed on RTX PRO 6000.
 
 These boundaries matter: patch application, syntax checks and small numerical tests are useful replication checks, but they do not establish fresh-host end-to-end timing or output quality.
-

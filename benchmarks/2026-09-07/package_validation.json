@@ -1,0 +1,261 @@
+{
+  "checked_utc": "2026-09-07T21:05:17.676375+00:00",
+  "scope": "Portable package checks on the original four-GPU host using the existing pinned Python environment; not a new end-to-end generation campaign.",
+  "fresh_source_patch_byte_exact": true,
+  "python_syntax": "passed",
+  "local_markdown_links": "passed",
+  "exported_records_match_originals": 12,
+  "portable_summary_validated_original_media": 12,
+  "model_files_verified": 61,
+  "adapter_sha256_verified": "4ce198c83132251b7fd0de2503823aa49c53983f068318f66cb19eaefb7fcc12",
+  "fresh_host_dependency_install": "not_performed",
+  "eight_gpu_test": "not_performed",
+  "sm120_probe": [
+    {
+      "rank": 0,
+      "capability": [
+        12,
+        0
+      ],
+      "torch": "2.10.0+cu130",
+      "status": "passed",
+      "nccl_all_to_all_exact": true,
+      "bsa_gate": {
+        "backend": "sol_bsa",
+        "passed": true,
+        "shape": [
+          1,
+          256,
+          14,
+          128
+        ],
+        "max_abs": 0.001953125,
+        "mean_abs": 9.231978037860245e-05,
+        "rel_l2": 0.0021086186170578003
+      }
+    },
+    {
+      "rank": 1,
+      "capability": [
+        12,
+        0
+      ],
+      "torch": "2.10.0+cu130",
+      "status": "passed",
+      "nccl_all_to_all_exact": true,
+      "bsa_gate": {
+        "backend": "sol_bsa",
+        "passed": true,
+        "shape": [
+          1,
+          256,
+          14,
+          128
+        ],
+        "max_abs": 0.001953125,
+        "mean_abs": 9.231978037860245e-05,
+        "rel_l2": 0.0021086186170578003
+      }
+    },
+    {
+      "rank": 2,
+      "capability": [
+        12,
+        0
+      ],
+      "torch": "2.10.0+cu130",
+      "status": "passed",
+      "nccl_all_to_all_exact": true,
+      "bsa_gate": {
+        "backend": "sol_bsa",
+        "passed": true,
+        "shape": [
+          1,
+          256,
+          14,
+          128
+        ],
+        "max_abs": 0.001953125,
+        "mean_abs": 9.231978037860245e-05,
+        "rel_l2": 0.0021086186170578003
+      }
+    },
+    {
+      "rank": 3,
+      "capability": [
+        12,
+        0
+      ],
+      "torch": "2.10.0+cu130",
+      "status": "passed",
+      "nccl_all_to_all_exact": true,
+      "bsa_gate": {
+        "backend": "sol_bsa",
+        "passed": true,
+        "shape": [
+          1,
+          256,
+          14,
+          128
+        ],
+        "max_abs": 0.001953125,
+        "mean_abs": 9.231978037860245e-05,
+        "rel_l2": 0.0021086186170578003
+      }
+    }
+  ],
+  "tiny_encoder_tp": [
+    [
+      {
+        "dtype": "torch.float32",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          1.553963357991961e-07,
+          2.4540747745049885e-07,
+          2.863042425360618e-07
+        ],
+        "sharding": {
+          "rank": 0,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 624768,
+          "parameter_bytes_after": 182400,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          0.003255795454606414,
+          0.005362013354897499,
+          0.006989432033151388
+        ],
+        "sharding": {
+          "rank": 0,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 312384,
+          "parameter_bytes_after": 91200,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      }
+    ],
+    [
+      {
+        "dtype": "torch.float32",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          1.553963357991961e-07,
+          2.4540747745049885e-07,
+          2.863042425360618e-07
+        ],
+        "sharding": {
+          "rank": 1,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 624768,
+          "parameter_bytes_after": 182400,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          0.003255795454606414,
+          0.005362013354897499,
+          0.006989432033151388
+        ],
+        "sharding": {
+          "rank": 1,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 312384,
+          "parameter_bytes_after": 91200,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      }
+    ],
+    [
+      {
+        "dtype": "torch.float32",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          1.553963357991961e-07,
+          2.4540747745049885e-07,
+          2.863042425360618e-07
+        ],
+        "sharding": {
+          "rank": 2,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 624768,
+          "parameter_bytes_after": 182400,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          0.003255795454606414,
+          0.005362013354897499,
+          0.006989432033151388
+        ],
+        "sharding": {
+          "rank": 2,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 312384,
+          "parameter_bytes_after": 91200,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      }
+    ],
+    [
+      {
+        "dtype": "torch.float32",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          1.553963357991961e-07,
+          2.4540747745049885e-07,
+          2.863042425360618e-07
+        ],
+        "sharding": {
+          "rank": 3,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 624768,
+          "parameter_bytes_after": 182400,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "relative_l2_by_hidden_state": [
+          0.0,
+          0.003255795454606414,
+          0.005362013354897499,
+          0.006989432033151388
+        ],
+        "sharding": {
+          "rank": 3,
+          "world_size": 4,
+          "layers": 3,
+          "parameter_bytes_before": 312384,
+          "parameter_bytes_after": 91200,
+          "local_query_heads": 2,
+          "local_kv_heads": 1
+        }
+      }
+    ]
+  ]
+}
